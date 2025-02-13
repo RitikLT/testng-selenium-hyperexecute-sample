@@ -10,7 +10,7 @@ pre:
 
 testDiscovery:
   type: raw
-  mode: static
+  mode: remote
   command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
 
 testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
@@ -19,3 +19,15 @@ retryOnFailure: true
 maxRetries: 1
 
 jobLabel: [selenium-testng, linux, v1, autosplit]
+
+globalPre:
+  mode: remote
+  commands:
+    - echo "global pre"
+  runson: "win11"
+
+globalPost:
+  mode: remote
+  commands:
+    - echo "global post"
+  runson: "win11"

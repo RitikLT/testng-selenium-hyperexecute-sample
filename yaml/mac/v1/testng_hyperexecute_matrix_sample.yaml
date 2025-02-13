@@ -19,3 +19,15 @@ retryOnFailure: true
 maxRetries: 1
 
 jobLabel: [selenium-testng, mac, matrix]
+
+globalPre:
+  mode: remote
+  commands:
+    - echo "global pre"
+  runson: "mac15"
+
+globalPost:
+  mode: remote
+  commands:
+    - echo "global post"
+  runson: "mac15"

@@ -6,7 +6,7 @@ matrix:
   tests: ["Test_1", "Test_2"]
   browser: ["Chrome", "MicrosoftEdge"]
   version: ["latest"]
-  os: ["win"]
+  os: ["win11"]
 
 pre:
   - mvn dependency:resolve
@@ -20,3 +20,14 @@ retryOnFailure: true
 maxRetries: 1
 
 jobLabel: [selenium-testng, win11, matrix]
+globalPre:
+  mode: remote
+  commands:
+    - echo "global pre"
+  runson: "win"
+
+globalPost:
+  mode: remote
+  commands:
+    - echo "global post"
+  runson: "win"
