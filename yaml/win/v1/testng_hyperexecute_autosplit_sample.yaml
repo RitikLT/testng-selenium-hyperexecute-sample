@@ -19,14 +19,3 @@ retryOnFailure: true
 maxRetries: 1
 
 jobLabel: [selenium-testng, win, v1, autosplit]
-globalPre:
-  mode: local
-  commands:
-    - echo "global pre"
-  runson: "mac"
-
-globalPost:
-  mode: local
-  commands:
-    - echo "global post"
-  runson: "mac"
