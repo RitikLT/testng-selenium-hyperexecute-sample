@@ -34,7 +34,7 @@ public class Test1
         capabilities.setCapability("platform", System.getenv("HYPEREXECUTE_PLATFORM"));
         capabilities.setCapability("browserName", browser);
         capabilities.setCapability("version", version);
-
+        capabilities.setCapability("selenium_version", "4.0.0");
         capabilities.setCapability("tunnel",false);
         capabilities.setCapability("network",true);
         capabilities.setCapability("console",true);
