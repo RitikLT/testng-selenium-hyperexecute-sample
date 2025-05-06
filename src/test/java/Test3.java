@@ -117,7 +117,7 @@ public class Test3
     {
         if (driver != null)
         {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + "ignored");
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
         }
     }
