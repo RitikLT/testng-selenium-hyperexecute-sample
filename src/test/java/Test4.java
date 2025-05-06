@@ -109,7 +109,6 @@ public class Test4
         extent.endTest(test1);
         extent.flush();
 
-        /* Once you are outside this code, the list would be empty */
     }
 
     @AfterMethod
@@ -117,7 +116,7 @@ public class Test4
     {
         if (driver != null)
         {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + "ignored");
             driver.quit();
         }
     }
