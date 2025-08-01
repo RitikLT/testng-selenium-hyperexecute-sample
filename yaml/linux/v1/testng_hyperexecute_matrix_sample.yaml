@@ -22,7 +22,7 @@ pre:
 testSuites:
   - mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 -DselectedTests=$tests
 
-parallelism: 37
+parallelism: 10
 
 retryOnFailure: true
 maxRetries: 1
