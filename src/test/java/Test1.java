@@ -20,7 +20,7 @@ import java.net.URL;
 public class Test1
 {
     RemoteWebDriver driver = null;
-    public static String status = "passed";
+    public static String status = "ignored";
     public static String username = System.getenv("LT_USERNAME");
     public static String access_key = System.getenv("LT_ACCESS_KEY");
 
@@ -189,7 +189,7 @@ public class Test1
     {
         if (driver != null)
         {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=failed" + status);
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
         }
     }
