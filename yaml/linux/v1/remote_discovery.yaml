@@ -32,6 +32,13 @@ vars:
 pre:
   # - echo ${abc}
   # - echo ${mygate}
-  - echo ${vars_key}
   - echo ${mine}
+  - echo ${vars_key}
+  - echo ${yours}
+post:
+  # - echo ${abc}
+  # - echo ${mygate}
+
+  - echo ${mine}
+  - echo ${vars_key}
   - echo ${yours}
