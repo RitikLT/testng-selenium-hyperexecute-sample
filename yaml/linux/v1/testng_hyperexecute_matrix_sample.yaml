@@ -28,6 +28,3 @@ retryOnFailure: true
 maxRetries: 1
 
 jobLabel: [selenium-testng, linux, matrix]
-
-project: 
-  name: TestNG_HyperExecute_Matrix_Project
