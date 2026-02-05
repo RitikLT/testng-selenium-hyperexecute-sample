@@ -26,10 +26,10 @@ vars:
   yours: sachin
   vars_key: hello
   xyz: abc
-  # vars_key1: ${vars_key}
-  # ${vars_key}: hello11
-  # value_recursive: ${${vars_key}}
-  # abc: ${api_key}
+  vars_key1: ${vars_key}
+  ${vars_key}: hello11
+  value_recursive: ${${vars_key}}
+  abc: ${api_key}
 pre:
   # - echo ${abc}
   # - echo ${mygate}
