@@ -21,21 +21,25 @@ maxRetries: 1
 
 jobLabel: [selenium-testng, linux, v1, autosplit, remote]
 
-vars:
-  mine: akansh
-  yours: sachin
-  vars_key: hello
-  xyz: abc
-  vars_key1: ${vars_key}
-  ${vars_key}: hello11
-  value_recursive: ${${vars_key}}
-  abc: ${api_key}
+# vars:
+#   mine: akansh
+#   yours: sachin
+#   vars_key: hello
+#   xyz: abc
+#   vars_key1: ${vars_key}
+#   ${vars_key}: hello11
+#   value_recursive: ${${vars_key}}
+#   abc: ${api_key}
+env:
+  RITIK: ${RITIK}
 pre:
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - echo ${RITIK}
   # - echo ${abc}
   # - echo ${mygate}
-  - echo ${mine}
-  - echo ${vars_key}
-  - echo ${yours}
-  - echo ${xyz}
-  - echo ${abc}
+  # - echo ${mine}
+  # - echo ${vars_key}
+  # - echo ${yours}
+  # - echo ${xyz}
+  # - echo ${abc}
   
