@@ -12,9 +12,11 @@ runtime:
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
   - .m2
-
+env:
+  RITIK: ${RITIK}
 pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - echo ${RITIK}
 
 testDiscovery:
   type: raw
